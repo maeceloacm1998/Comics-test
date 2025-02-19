@@ -32,7 +32,7 @@
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="Ocorreu algum erro"
+                android:text="@string/tv_error"
                 android:textSize="22sp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
