@@ -11,13 +11,9 @@ suspend fun <T> safeRunDispatcher(
 ) = withContext(dispatcher) {
     return@withContext try {
         val result = block()
-        Result.Success(result)
+        Result.success(result)
     } catch (ex: Exception) {
-        Result.Failure(ex)
+        Result.failure(ex)
     }
 }
 
-sealed class Result<out T> {
-    class Success<T>(val data: T) : Result<T>()
-    class Failure(val error: Exception) : Result<Nothing>()
-}

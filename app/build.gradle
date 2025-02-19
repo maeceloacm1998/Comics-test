@@ -3,16 +3,29 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// Upload local.properties variables
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+
 android {
+    namespace 'com.example.comics'
     compileSdk 35
 
     defaultConfig {
         applicationId "com.example.comics"
-        namespace 'com.example.comics'
         minSdk 21
         targetSdk 34
         versionCode 1
         versionName "1.0"
+
+        // Variables from local.properties
+        buildConfigField "String", "BASE_URL", "\"${localProperties.getProperty('BASE_URL')}\""
+        buildConfigField "String", "MARVEL_API_KEY", "\"${localProperties.getProperty('MARVEL_API_KEY')}\""
+        buildConfigField "String", "MARVEL_TS", "\"${localProperties.getProperty('MARVEL_TS')}\""
+        buildConfigField "String", "MARVEL_HASH", "\"${localProperties.getProperty('MARVEL_HASH')}\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -35,6 +48,7 @@ android {
 
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 
     compileOptions {
@@ -62,6 +76,7 @@ dependencies {
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.lifecycle.common.java8)
     implementation(libs.swiperefreshlayout)
+    implementation(libs.koin.android)
 
     testImplementation(libs.junit)
     testImplementation(libs.mockk)

@@ -1,6 +1,6 @@
-package com.example.comics.view
+package com.example.comics.data.models
 
-data class ItemVO(
+data class ComicsItemModel (
     var image: String,
     var title: String,
     var subtitle: String
