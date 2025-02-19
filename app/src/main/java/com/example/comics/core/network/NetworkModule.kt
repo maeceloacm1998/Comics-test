@@ -1,4 +1,4 @@
-package com.example.comics.network
+package com.example.comics.core.network
 
 import com.example.comics.BuildConfig
 import okhttp3.OkHttpClient

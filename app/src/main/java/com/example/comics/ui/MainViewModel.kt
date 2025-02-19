@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.comics.data.models.ResultModel
 import com.example.comics.domain.GetComicsUseCase
-import com.example.comics.util.State
+import com.example.comics.core.util.State
 import kotlinx.coroutines.launch
 
 class MainViewModel(

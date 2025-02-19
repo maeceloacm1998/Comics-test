@@ -8,9 +8,9 @@ import com.example.comics.data.models.ComicsItemModel
 import com.example.comics.data.models.asComicsItemModel
 import com.example.comics.databinding.ActivityMainBinding
 import com.example.comics.ui.adapters.ComicsListAdapter
-import com.example.comics.util.State.Error
-import com.example.comics.util.State.Loading
-import com.example.comics.util.State.Success
+import com.example.comics.core.util.State.Error
+import com.example.comics.core.util.State.Loading
+import com.example.comics.core.util.State.Success
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {

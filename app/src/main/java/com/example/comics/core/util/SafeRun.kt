@@ -1,4 +1,4 @@
-package com.example.comics.util
+package com.example.comics.core.util
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope

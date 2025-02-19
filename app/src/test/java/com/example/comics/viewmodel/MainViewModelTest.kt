@@ -9,7 +9,7 @@ import com.example.comics.data.models.ThumbnailModel
 import com.example.comics.domain.GetComicsUseCase
 import com.example.comics.getOrAwaitValueTest
 import com.example.comics.ui.MainViewModel
-import com.example.comics.util.State
+import com.example.comics.core.util.State
 import io.mockk.coEvery
 import io.mockk.mockk
 import junit.framework.TestCase.assertEquals

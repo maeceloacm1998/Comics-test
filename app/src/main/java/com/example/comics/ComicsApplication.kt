@@ -2,7 +2,7 @@ package com.example.comics
 
 import android.app.Application
 import com.example.comics.data.di.MainModule
-import com.example.comics.network.NetworkModule
+import com.example.comics.core.network.NetworkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 

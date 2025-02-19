@@ -1,4 +1,4 @@
-package com.example.comics.util
+package com.example.comics.core.util
 
 sealed class State<T>(
     val data: T? = null,
